@@ -10,9 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TA_19.dir/View/Menus/Menu.cpp.o"
   "CMakeFiles/TA_19.dir/View/View.cpp.o"
   "CMakeFiles/TA_19.dir/main.cpp.o"
-  "TA_19.exe"
+  "TA_19"
   "TA_19.pdb"
-  "libTA_19.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
