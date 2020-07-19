@@ -1,1 +1,3 @@
-0
+2
+Physics1	Nobari	1	0	
+Physics2	Nobari	1	1	Physics1	

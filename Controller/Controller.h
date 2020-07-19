@@ -17,6 +17,22 @@ private:
     std::vector<Professor> professors;
     std::vector<Course> courses;
     std::vector<Course> currentSemesterCourses;
+public:
+    const std::string &getCurrentSemester() const;
+
+    const std::vector<Student> &getStudents() const;
+
+    const std::vector<Professor> &getProfessors() const;
+
+    const std::vector<Course> &getCourses() const;
+
+    const std::vector<Course> &getCurrentSemesterCourses() const;
+
+    std::vector<Course> getProfessorCourses(const std::string& id);
+
+    const std::map<std::string,double> &getStudentCourses (const std::string& id);
+
+private:
     Controller() = default;
 
 public:
@@ -24,18 +40,26 @@ public:
     void load();
     void save() const;
 
-    void addStudent(std::string ID, std::string first, std::string last);
+    void addStudent(const std::string& ID, std::string first, std::string last);
     void addProfessor(std::string ID, std::string first, std::string last, std::string title);
     void addCourse(std::string courseName, std::string profLast, std::string semester,
             std::vector<std::string> pre);
     void takeCourse(const std::string& studentID, const std::string& courseName);
-    Student& findStudent(std::string ID);
-
+    Student& findStudent(const std::string& ID);
+    Professor& findProfessor(const std::string& ID);
+    const Course& findCourse(const std::string& profID);
+    void dropCourse(const std::string& studentID, const std::string& courseName);
 
     bool inStudents(const std::string& ID) const;
     bool inProfessors(const std::string& ID) const;
     bool inProfessorsByLastName(const std::string& last) const;
     bool inCourses(const std::string& courseName) const;
+
+
+    double calcProfSalary(const std::string& ID);
+    double calcStudentSalary(const std::string& ID);
+
+    void submitGrade(const std::string& profID,const std::string& studentID,const std::string& course,double grade);
 };
 
 

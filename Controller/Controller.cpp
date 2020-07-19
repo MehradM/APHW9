@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -67,7 +68,7 @@ void Controller::save() const{
     outputCourse.close();
 }
 
-void Controller:: addStudent(std::string ID, std::string first, std::string last){
+void Controller:: addStudent(const std::string& ID, std::string first, std::string last){
     if(!inStudents(ID)){
         Student stu{move(ID), move(first), move(last), 0,
                     vector<string>{}, map<string, double>{}};
@@ -131,7 +132,7 @@ bool Controller:: inProfessorsByLastName(const std::string& last) const{
     return false;
 }
 
-Student& Controller:: findStudent(string ID){
+Student& Controller:: findStudent(const string& ID){
     for( auto& stu : students ){
         if(stu.studentId == ID){
             return stu;
@@ -144,4 +145,81 @@ void Controller:: takeCourse(const std::string& studentID, const std::string& co
     if(inCourses(courseName)){
         findStudent(studentID).currentSemesterCourses.insert({courseName, 0});
     }
+}
+
+const string &Controller::getCurrentSemester() const {
+    return currentSemester;
+}
+
+const vector<Student> &Controller::getStudents() const {
+    return students;
+}
+
+const vector<Professor> &Controller::getProfessors() const {
+    return professors;
+}
+
+const vector<Course> &Controller::getCourses() const {
+    return courses;
+}
+
+const vector<Course> &Controller::getCurrentSemesterCourses() const {
+    return currentSemesterCourses;
+}
+
+vector<Course> Controller::getProfessorCourses(const std::string &id) {
+    vector<Course> profCourses;
+    string lastName = findProfessor(id).getLastName();
+    for_each(courses.begin(),courses.end(),[&profCourses,lastName](const Course& course) {
+        if (course.profLastName == lastName) profCourses.push_back(course);
+    });
+    return profCourses;
+}
+
+const map<string,double> &Controller::getStudentCourses(const std::string &id) {
+    return findStudent(id).currentSemesterCourses;
+}
+
+void Controller::dropCourse(const std::string &studentID, const std::string &courseName) {
+    findStudent(studentID).currentSemesterCourses.erase(courseName);
+}
+
+double Controller::calcProfSalary(const std::string& id) {
+    return findProfessor(id).calculateSalary();
+}
+
+double Controller::calcStudentSalary(const std::string& id) {
+    return findStudent(id).calculateSalary();
+}
+
+Professor &Controller::findProfessor(const std::string& ID) {
+    for (Professor & el : professors) {
+        if(el.profId == ID) {
+            return el;
+        }
+    }
+    throw invalid_argument("Professor not found!");
+}
+
+void Controller::submitGrade(const std::string& profID,const std::string& studentID,
+        const std::string& course,double grade) {
+    if(findCourse(course).profLastName == findProfessor(profID).getLastName()) {
+        Student& student = findStudent(studentID);
+        if(student.currentSemesterCourses.find(course) != student.currentSemesterCourses.end()) {
+            student.currentSemesterCourses.insert({course, grade});
+        }
+    }
+    else {
+        throw invalid_argument("This professor is not allowed to set grade of this course!");
+    }
+
+}
+
+const Course &Controller::findCourse(const std::string &course) {
+    for (const Course& el : courses) {
+        if(el.courseName == course) {
+            return el;
+        }
+    }
+    throw invalid_argument("Course not found!");
 }
