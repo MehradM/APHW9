@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <iomanip>
 #include "View.h"
 
 using namespace std;
@@ -12,8 +13,9 @@ void View::makeMenus( Menu* root ){
     auto studentMenu = new InternalMenu{"Student Menu", root};
     auto professorMenu = new InternalMenu{"Professor Menu", root};
     auto managerMenu = new InternalMenu{"Manager Menu", root};
+    auto mathClass = new InternalMenu("Math Class",root);
     root->setSubMenus(vector<Menu*>
-            {commandsFromFile, studentMenu, professorMenu, managerMenu});
+            {commandsFromFile, studentMenu, professorMenu, managerMenu,mathClass});
 
     // make Student Menu
 
@@ -189,6 +191,13 @@ void View::makeMenus( Menu* root ){
     }};
     coursesMenu->setSubMenus(vector<Menu*>
             {addCourses, managerShowThisSemesterCourses, showAllCourses});
+
+    auto readMembers = new LeafMenu("Read Members", mathClass,[](Controller& cont){cont.readMembersFromFile();});
+    auto calculateTotalSalary = new LeafMenu("Calculate Total Salary",mathClass,[](Controller& cont){
+        cout << fixed << "Total Salary of MathClass: " << setprecision(2) << cont.calculateTotalSalary() << endl;
+    });
+
+    mathClass->setSubMenus(vector<Menu*> {readMembers,calculateTotalSalary});
 
 
 }

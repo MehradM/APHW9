@@ -6,6 +6,7 @@
 #include "../Model/Student.h"
 #include "../Model/Professor.h"
 #include "../Model/Course.h"
+#include "../Model/DoubleMajorStudent.hpp"
 
 class Controller {
     friend class Menu;
@@ -17,6 +18,7 @@ private:
     std::vector<Professor> professors;
     std::vector<Course> courses;
     std::vector<Course> currentSemesterCourses;
+    std::vector<Person*> mathClass;
 public:
     const std::string &getCurrentSemester() const;
 
@@ -62,6 +64,9 @@ public:
     void submitGrade(const std::string& profID,const std::string& studentID,const std::string& course,double grade);
 
     bool preCoursesPassed(const Student& a, const std::string& course);
+
+    void readMembersFromFile();
+    double calculateTotalSalary();
 };
 
 

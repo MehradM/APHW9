@@ -239,3 +239,39 @@ bool Controller::preCoursesPassed(const Student &student,const std::string& cour
     }
     return true;
 }
+
+void Controller::readMembersFromFile() {
+    ifstream file("members.txt");
+    char type;
+    string id, fName, lName, major2,&title = major2;
+    double wh;
+    Person * person;
+    while (file.good()) {
+        file >> type >> id >> fName >> lName ;
+        switch (type) {
+            case 'P':
+                file >> title >> wh;
+                person = new Professor(id,fName,lName,wh,title);
+                break;
+            case 'S':
+                file >> wh;
+                person = new Student(id,fName,lName,wh,vector<string>(0),
+                        {{"Mathematics",0}});
+                break;
+            case 'D':
+                file >> major2 >> wh;
+                person = new DoubleMajorStudent(id,fName,lName,wh,vector<string>(0),
+                        {{"Mathematics",0}},major2);
+                break;
+        }
+        mathClass.push_back(person);
+    }
+}
+
+double Controller::calculateTotalSalary() {
+    double total = 0;
+    for (const Person * person : mathClass) {
+        total += person->calculateSalary();
+    }
+    return total;
+}

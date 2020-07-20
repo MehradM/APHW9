@@ -5,12 +5,18 @@ CMakeFiles/TA_19.dir/Controller/Controller.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.cpp
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
 CMakeFiles/TA_19.dir/Model/Course.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.cpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+CMakeFiles/TA_19.dir/Model/DoubleMajorStudent.cpp.o
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.cpp
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
+ /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
 CMakeFiles/TA_19.dir/Model/Person.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.cpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
@@ -25,6 +31,7 @@ CMakeFiles/TA_19.dir/Model/Student.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/CommandsFromFileMenu.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
@@ -34,6 +41,7 @@ CMakeFiles/TA_19.dir/View/Menus/CommandsFromFileMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/InternalMenu.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
@@ -43,6 +51,7 @@ CMakeFiles/TA_19.dir/View/Menus/InternalMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/LeafMenu.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
@@ -52,6 +61,7 @@ CMakeFiles/TA_19.dir/View/Menus/LeafMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/Menu.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
@@ -60,6 +70,7 @@ CMakeFiles/TA_19.dir/View/Menus/Menu.cpp.o
 CMakeFiles/TA_19.dir/View/View.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
@@ -72,6 +83,7 @@ CMakeFiles/TA_19.dir/View/View.cpp.o
 CMakeFiles/TA_19.dir/main.cpp.o
  /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
+ /home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
  /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
  /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
