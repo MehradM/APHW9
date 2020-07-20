@@ -1,4 +1,5 @@
 show students
+add student 982023026 Hassan Mirarabshahi
 add student 952023016 Farhang Doroudian
 add student 952023017 Alireza Akhavan
 add student 9520230a7 Maryam Akhavan

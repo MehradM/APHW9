@@ -70,7 +70,7 @@ void Controller::save() const{
 
 void Controller:: addStudent(const std::string& ID, std::string first, std::string last){
     if(!inStudents(ID)){
-        Student stu{move(ID), move(first), move(last), 0,
+        Student stu{ID, move(first), move(last), 0,
                     vector<string>{}, map<string, double>{}};
         students.push_back(stu);
     }
@@ -142,7 +142,7 @@ Student& Controller:: findStudent(const string& ID){
 }
 
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
-    if(inCourses(courseName)){
+    if(inCourses(courseName) && preCoursesPassed(findStudent(studentID),courseName)){
         findStudent(studentID).currentSemesterCourses.insert({courseName, 0});
     }
 }
@@ -203,10 +203,15 @@ Professor &Controller::findProfessor(const std::string& ID) {
 
 void Controller::submitGrade(const std::string& profID,const std::string& studentID,
         const std::string& course,double grade) {
-    if(findCourse(course).profLastName == findProfessor(profID).getLastName()) {
+    auto profLastName = findProfessor(profID).getLastName();
+    if(any_of(courses.begin(),courses.end(),[profLastName,course](const Course& c){
+        return c.getCourseName() == course && c.getProfLastName() ==  profLastName;})) {
         Student& student = findStudent(studentID);
-        if(student.currentSemesterCourses.find(course) != student.currentSemesterCourses.end()) {
-            student.currentSemesterCourses.insert({course, grade});
+        if((student.currentSemesterCourses.find(course) != student.currentSemesterCourses.end())) {
+            student.currentSemesterCourses[course] = grade;
+        }
+        else {
+            throw invalid_argument("The student doesn't have this course!");
         }
     }
     else {
@@ -222,4 +227,15 @@ const Course &Controller::findCourse(const std::string &course) {
         }
     }
     throw invalid_argument("Course not found!");
+}
+
+bool Controller::preCoursesPassed(const Student &student,const std::string& course) {
+    Course theCourse = findCourse(course);
+    int count = 0;
+    for ( const string & el : theCourse.getPreCourses()) {
+        if (none_of(student.passedCourses.begin(),student.passedCourses.end(),[&el](const string& preCourse){
+            return el == preCourse;
+        })) throw invalid_argument("Pre-courses not passed!");
+    }
+    return true;
 }

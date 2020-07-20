@@ -39,10 +39,9 @@ void CommandsFromFileMenu::run() {
                 processAddCourse(results);
 
             } else if (results[0] == "take" && results[1] == "course") {
-
+                controller.addProfessor(results[2],results[3],results[4],results[5]);
             } else if (results[0] == "show" && results[1] == "students") {
                 showStudents();
-
             } else {
                 throw invalid_argument("This command is not defined!!");
             }

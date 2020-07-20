@@ -39,3 +39,36 @@ std::istream& operator>>(std::istream & input, Course& course){
 
     return input;
 }
+
+const string &Course::getCourseName() const {
+    return courseName;
+}
+
+void Course::setCourseName(const string &courseName) {
+    Course::courseName = courseName;
+}
+
+const string &Course::getProfLastName() const {
+    return profLastName;
+}
+
+void Course::setProfLastName(const string &profLastName) {
+    Course::profLastName = profLastName;
+}
+
+const string &Course::getSemester() const {
+    return semester;
+}
+
+void Course::setSemester(const string &semester) {
+    Course::semester = semester;
+}
+
+const vector<std::string> &Course::getPreCourses() const {
+    return preCourses;
+}
+
+void Course::setPreCourses(const vector<std::string> &preCourses) {
+    Course::preCourses = preCourses;
+}
+

@@ -14,6 +14,22 @@ private:
     std::string profLastName;
     std::string semester;
     std::vector<std::string> preCourses;
+public:
+    const std::string &getCourseName() const;
+
+    void setCourseName(const std::string &courseName);
+
+    const std::string &getProfLastName() const;
+
+    void setProfLastName(const std::string &profLastName);
+
+    const std::string &getSemester() const;
+
+    void setSemester(const std::string &semester);
+
+    const std::vector<std::string> &getPreCourses() const;
+
+    void setPreCourses(const std::vector<std::string> &preCourses);
 
 public:
     Course(){}

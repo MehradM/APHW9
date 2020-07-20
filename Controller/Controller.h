@@ -12,7 +12,7 @@ class Controller {
     friend class CommandsFromFileMenu;
     friend class LeafMenu;
 private:
-    std::string currentSemester;
+    std::string currentSemester = "98-99";
     std::vector<Student> students;
     std::vector<Professor> professors;
     std::vector<Course> courses;
@@ -60,6 +60,8 @@ public:
     double calcStudentSalary(const std::string& ID);
 
     void submitGrade(const std::string& profID,const std::string& studentID,const std::string& course,double grade);
+
+    bool preCoursesPassed(const Student& a, const std::string& course);
 };
 
 
