@@ -7,7 +7,7 @@
 #include <vector>
 #include <map>
 
-class Student : virtual public Person {
+class Student : public Person {
     friend class Controller;
     friend std::ostream& operator<<(std::ostream & output, const Student& student);
     friend std::istream& operator>>(std::istream & input, Student& student);

@@ -6,7 +6,7 @@
 #define TA_19_DOUBLEMAJORSTUDENT_HPP
 #include "Student.h"
 
-class DoubleMajorStudent : virtual public  Student {
+class DoubleMajorStudent : public  Student {
 private:
     std::string major2;
 public:
