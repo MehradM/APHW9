@@ -51,6 +51,7 @@ public:
     Professor& findProfessor(const std::string& ID);
     const Course& findCourse(const std::string& profID);
     void dropCourse(const std::string& studentID, const std::string& courseName);
+    void setWorkHours(const std::string& ID, double wh);
 
     bool inStudents(const std::string& ID) const;
     bool inProfessors(const std::string& ID) const;

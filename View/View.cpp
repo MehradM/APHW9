@@ -57,7 +57,11 @@ void View::makeMenus( Menu* root ){
         string ID;
         cout << "Enter student ID:";
         cin >> ID;
-        cout << "Your Salary:" << cont.calcStudentSalary(ID);
+        double workHours;
+        cout << "Enter student's work hours:";
+        cin >> workHours;
+        cont.setWorkHours(ID, workHours);
+        cout << std::fixed << setprecision(2) << "Your Salary:" << cont.calcStudentSalary(ID) << endl;
     }};
 
     studentMenu->setSubMenus(vector<Menu*>
@@ -95,7 +99,11 @@ void View::makeMenus( Menu* root ){
         string ID;
         cout << "Enter professor ID:";
         cin >> ID;
-        cout << "Your salary: " << cont.calcProfSalary(ID);
+        double workHours;
+        cout << "Enter professor's work hours:";
+        cin >> workHours;
+        cont.setWorkHours(ID, workHours);
+        cout << std::fixed << setprecision(2) << "Your salary: " << cont.calcProfSalary(ID) << endl;
     }};
 
     professorMenu->setSubMenus(vector<Menu*>

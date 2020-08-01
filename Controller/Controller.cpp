@@ -142,7 +142,11 @@ Student& Controller:: findStudent(const string& ID){
 }
 
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
-    if(inCourses(courseName) && preCoursesPassed(findStudent(studentID),courseName)){
+    Student& student = findStudent(studentID);
+    if(inCourses(courseName) && preCoursesPassed(student,courseName),
+            none_of(student.passedCourses.begin(),student.passedCourses.end(),[courseName](const string& course) {
+                return course == courseName;
+            })){
         findStudent(studentID).currentSemesterCourses.insert({courseName, 0});
     }
 }
@@ -274,4 +278,13 @@ double Controller::calculateTotalSalary() {
         total += person->calculateSalary();
     }
     return total;
+}
+
+void Controller::setWorkHours(const std::string& ID, double wh) {
+    if (ID.length() == 9) {
+        return findStudent(ID).setWorkHours(wh);
+    }
+    else {
+        return findProfessor(ID).setWorkHours(wh);
+    }
 }
