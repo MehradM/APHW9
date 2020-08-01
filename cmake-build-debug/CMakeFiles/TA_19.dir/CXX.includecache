@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/mehrad/CLionProjects/EducationSystem/Controller/Controller.cpp
+Controller.h
+/home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
+fstream
+-
+vector
+-
+map
+-
+algorithm
+-
+
 /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
 string
 -
@@ -17,8 +29,8 @@ vector
 /home/mehrad/CLionProjects/EducationSystem/Model/Professor.h
 ../Model/Course.h
 /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
-../Model/DoubleMajorStudent.hpp
-/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
+../Model/DoubleMajorStudent.h
+/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
 
 /home/mehrad/CLionProjects/EducationSystem/Model/Course.h
 string
@@ -26,7 +38,11 @@ string
 vector
 -
 
-/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp
+/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.cpp
+DoubleMajorStudent.h
+/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
+
+/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
 Student.h
 /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
 
@@ -42,6 +58,16 @@ iostream
 Person.h
 /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
 
+/home/mehrad/CLionProjects/EducationSystem/Model/Student.cpp
+Student.h
+/home/mehrad/CLionProjects/EducationSystem/Model/Student.h
+regex
+-
+stdexcept
+-
+sstream
+-
+
 /home/mehrad/CLionProjects/EducationSystem/Model/Student.h
 Person.h
 /home/mehrad/CLionProjects/EducationSystem/Model/Person.h
@@ -54,6 +80,20 @@ vector
 map
 -
 
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.cpp
+CommandsFromFileMenu.h
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.h
+iostream
+-
+fstream
+-
+sstream
+-
+iterator
+-
+stdexcept
+-
+
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.h
 string
 -
@@ -62,11 +102,25 @@ Menu.h
 ../../Controller/Controller.h
 /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
 
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/InternalMenu.cpp
+iostream
+-
+stdexcept
+-
+InternalMenu.h
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/InternalMenu.h
+
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/InternalMenu.h
 string
 -
 Menu.h
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/Menu.h
+
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/LeafMenu.cpp
+LeafMenu.h
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
+utility
+-
 
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
 string
@@ -77,6 +131,10 @@ Menu.h
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/Menu.h
 ../../Controller/Controller.h
 /home/mehrad/CLionProjects/EducationSystem/Controller/Controller.h
+
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/Menu.cpp
+Menu.h
+/home/mehrad/CLionProjects/EducationSystem/View/Menus/Menu.h
 
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/Menu.h
 string
@@ -103,4 +161,8 @@ Menus/CommandsFromFileMenu.h
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.h
 Menus/LeafMenu.h
 /home/mehrad/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
+
+/home/mehrad/CLionProjects/EducationSystem/main.cpp
+View/View.h
+/home/mehrad/CLionProjects/EducationSystem/View/View.h
 

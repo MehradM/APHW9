@@ -22,7 +22,7 @@ Student::Student(const std::string& studentId, std::string first, std::string la
         }
 
 double Student::calculateSalary() const{
-    return 5000 * getWorkHours();
+    return salary();
 }
 
 std::ostream& operator<<(std::ostream & output, const Student& student){

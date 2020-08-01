@@ -2,11 +2,9 @@
 // Created by mehrad on ۲۰۲۰/۷/۲۰.
 //
 
-#include "DoubleMajorStudent.hpp"
+#include "DoubleMajorStudent.h"
 
-double DoubleMajorStudent::calculateSalary() {
-    return 6500 * getWorkHours();
-}
+
 
 DoubleMajorStudent::DoubleMajorStudent(const std::string &studentId, const std::string &first, const std::string &last,
                                        double workHours, const std::vector<std::string> &passedCourses,
@@ -17,4 +15,8 @@ DoubleMajorStudent::DoubleMajorStudent(const std::string &studentId, const std::
 
 void DoubleMajorStudent::setMajor2(const std::string &major2) {
     DoubleMajorStudent::major2 = major2;
+}
+
+double DoubleMajorStudent::calculateSalary() {
+    return 6500 * getWorkHours();
 }

@@ -6,7 +6,7 @@
 #include "../Model/Student.h"
 #include "../Model/Professor.h"
 #include "../Model/Course.h"
-#include "../Model/DoubleMajorStudent.hpp"
+#include "../Model/DoubleMajorStudent.h"
 
 class Controller {
     friend class Menu;

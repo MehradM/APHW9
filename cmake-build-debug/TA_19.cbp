@@ -97,7 +97,7 @@
 		<Unit filename="/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.cpp">
 			<Option target="TA_19"/>
 		</Unit>
-		<Unit filename="/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.hpp">
+		<Unit filename="/home/mehrad/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h">
 			<Option target="TA_19"/>
 		</Unit>
 		<Unit filename="/home/mehrad/CLionProjects/EducationSystem/Model/Person.cpp">

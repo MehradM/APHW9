@@ -260,12 +260,12 @@ void Controller::readMembersFromFile() {
             case 'S':
                 file >> wh;
                 person = new Student(id,fName,lName,wh,vector<string>(0),
-                        {{"Mathematics",0}});
+                                     {{"Mathematics",0}});
                 break;
             case 'D':
                 file >> major2 >> wh;
                 person = new DoubleMajorStudent(id,fName,lName,wh,vector<string>(0),
-                        {{"Mathematics",0}},major2);
+                                                {{"Mathematics",0}},major2);
                 break;
         }
         mathClass.push_back(person);
@@ -274,7 +274,7 @@ void Controller::readMembersFromFile() {
 
 double Controller::calculateTotalSalary() {
     double total = 0;
-    for (const Person * person : mathClass) {
+    for (auto& person : mathClass) {
         total += person->calculateSalary();
     }
     return total;

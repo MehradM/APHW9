@@ -2,8 +2,8 @@
 // Created by mehrad on ۲۰۲۰/۷/۲۰.
 //
 
-#ifndef TA_19_DOUBLEMAJORSTUDENT_HPP
-#define TA_19_DOUBLEMAJORSTUDENT_HPP
+#ifndef TA_19_DOUBLEMAJORSTUDENT_H
+#define TA_19_DOUBLEMAJORSTUDENT_H
 #include "Student.h"
 
 class DoubleMajorStudent : public  Student {
@@ -16,9 +16,9 @@ public:
     DoubleMajorStudent(const std::string &studentId, const std::string &first, const std::string &last,
                        double workHours, const std::vector<std::string> &passedCourses,
                        const std::map<std::string, double> &currentSemesterCourses, const std::string &major2);
-
-    virtual double calculateSalary() final;
+    double salary() const {return 6500 * getWorkHours();}
+    double calculateSalary();
 };
 
 
-#endif //TA_19_DOUBLEMAJORSTUDENT_HPP
+#endif //TA_19_DOUBLEMAJORSTUDENT_H
