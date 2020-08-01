@@ -143,7 +143,7 @@ Student& Controller:: findStudent(const string& ID){
 
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
     Student& student = findStudent(studentID);
-    if(inCourses(courseName) && preCoursesPassed(student,courseName),
+    if(inCourses(courseName) && preCoursesPassed(student,courseName) &&
             none_of(student.passedCourses.begin(),student.passedCourses.end(),[courseName](const string& course) {
                 return course == courseName;
             })){
